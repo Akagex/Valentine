@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valentine's Day Surprise</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Start Screen -->
+  <div class="start-screen" id="startScreen">
+    <button class="start-button" id="startButton">Start!</button>
+  </div>
+
+  <!-- Top Bar with Music Player -->
+  <div class="top-bar">
+    <div class="music-controls">
+      <button id="playPauseButton">⏯️</button>
+      <input type="range" id="volumeSlider" min="0" max="1" step="0.1" value="0.6">
+    </div>
+  </div>
+
+  <!-- Envelope Screen -->
+  <div class="envelope-screen" id="envelopeScreen">
+    <div class="envelope">
+      <div class="envelope-front">
+        <div class="from-to">
+          <div class="from-text">From: Mike</div>
+          <div class="to-text">To: Sandy</div>
+        </div>
+        <button class="open-button" id="openButton">Click to open</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Letter Screen -->
+  <div class="letter-screen" id="letterScreen">
+    <div class="letter">
+      <div class="letter-content">
+        <p class="handwritten">Liebe Sandy,</p>
+        <p>ich hoffe, es geht dir gut. Ich möchte diesen Valentinstag nutzen, um mich bei dir zu entschuldigen – vor allem dafür, dass ich dir letztes Jahr nicht gezeigt habe, wie wichtig du für mich bist. Es tut mir leid, dass ich das versäumt habe.</p>
+        <p>Du warst immer etwas ganz Besonderes für mich, und ich würde mich unglaublich freuen, wenn du dieses Jahr mein Valentins-Schatz wärst. Es wäre mir eine Ehre, den Tag mit dir zu verbringen, wenn du es dir vorstellen könntest.</p>
+        <p>Egal, wie du dich entscheidest – ich schätze dich sehr und hoffe, dass wir in irgendeiner Form einander weiterhin wichtig bleiben.</p>
+        <p class="signature">Alles Liebe, Mike</p>
+      </div>
+      <button class="continue-button" id="continueButton">Continue...</button>
+    </div>
+  </div>
+
+  <!-- Valentine Question Screen -->
+  <div class="valentine-screen" id="valentineScreen">
+    <div class="valentine-content">
+      <img src="ressources/love_heart.gif" alt="Love Heart" class="love-heart">
+      <p class="valentine-question">Sandy, Willst du mein Valentinsschatz sein?</p>
+      <div class="button-container">
+        <button class="yes-button" id="yesButton">Ja!</button>
+        <button class="no-button" id="noButton">Nö!</button>
+      </div>
+    </div>
+    <div class="sakura-background"></div> <!-- Sakura background effect -->
+  </div>
+
+  <!-- Audio Element -->
+  <audio id="backgroundMusic" src="ressources/background_music.mp3" loop></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,277 @@
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #ffccf2; /* Pinkish background */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Ccircle cx='10' cy='10' r='2' fill='%23ffffff'/%3E%3C/svg%3E"); /* White hearts */
+  font-family: 'Arial', sans-serif;
+  overflow: hidden;
+}
+
+/* Start Screen */
+.start-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.start-button {
+  font-family: 'Dancing Script', cursive; /* Handwritten font */
+  font-size: 64px; /* Larger font */
+  padding: 30px 60px; /* Bigger button */
+  background-color: #ffd9eb; /* Lighter pink background */
+  color: #333;
+  border: none;
+  border-radius: 15px; /* Rounded corners */
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Top Bar */
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-color: #cc99c2; /* 20% darker than background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.music-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#playPauseButton {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+}
+
+#volumeSlider {
+  width: 100px;
+}
+
+/* Envelope Screen */
+.envelope-screen {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.envelope {
+  background-image: url('ressources/love-letter.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 600px; /* Original size */
+  height: 450px; /* Original size */
+  position: relative;
+}
+
+.envelope-front {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.from-to {
+  position: absolute;
+  top: 20px; /* Move "From:" to the top */
+  left: 20px; /* Move "From:" to the left */
+  right: 0;
+  display: flex;
+  flex-direction: column; /* Stack "From:" and "To:" vertically */
+  align-items: flex-start; /* Align "From:" to the left */
+}
+
+.from-text {
+  font-family: 'Dancing Script', cursive; /* Handwritten font */
+  font-size: 24px;
+  color: #333;
+}
+
+.to-text {
+  font-family: 'Dancing Script', cursive; /* Handwritten font */
+  font-size: 60px; /* Larger font size */
+  color: #333;
+  position: absolute;
+  bottom: -360px; /* Move "To:" further down */
+  left: 50%;
+  transform: translateX(-50%); /* Center "To:" horizontally */
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.open-button {
+  position: absolute;
+  top: 20%; /* Move button further down by an additional 10% */
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  background-color: #ff6f61;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Letter Screen */
+.letter-screen {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.letter {
+  background-image: url('ressources/paper.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 600px; /* Same as envelope */
+  height: 450px; /* Same as envelope */
+  padding: 20px;
+  position: relative;
+  border-radius: 15px; /* Round border */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow */
+  animation: slideOut 1s ease-in-out;
+}
+
+.letter-content {
+  font-family: 'Dancing Script', cursive;
+  font-size: 28px;
+  line-height: 1.6;
+  text-align: left;
+  max-height: 350px; /* Höhe begrenzen */
+  overflow: auto; /* Scrollen aktivieren */
+  padding-right: 10px; /* Platz für Scrollbar lassen */
+}
+
+.handwritten {
+  font-size: 36px; /* Larger font for the first line */
+  margin-bottom: 20px; /* Space below the first line */
+}
+
+.signature {
+  font-size: 28px; /* Slightly smaller font for the signature */
+  text-align: right; /* Align to the right */
+  margin-top: 20px; /* Space above the signature */
+}
+
+.continue-button {
+  position: absolute;
+  bottom: 20px; /* Move to the bottom */
+  right: 20px; /* Move to the right */
+  padding: 10px 20px;
+  background-color: #ff6f61;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Valentine Question Screen */
+.valentine-screen {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.valentine-content {
+  background-color: #ffd9eb; /* Lighter pink background */
+  width: 600px; /* Same as letter */
+  height: 450px; /* Same as letter */
+  padding: 20px;
+  border-radius: 15px; /* Round border */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow */
+  position: relative;
+  z-index: 2; /* Ensure content is above sakura background */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+}
+
+.love-heart {
+  width: 100px; /* Adjust size as needed */
+  height: auto;
+  margin-bottom: 20px; /* Space between GIF and text */
+}
+
+.valentine-question {
+  font-family: 'Dancing Script', cursive; /* Handwritten font */
+  font-size: 36px; /* Larger font for the question */
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px; /* Space below the question */
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px; /* Space between buttons */
+}
+
+.yes-button, .no-button {
+  padding: 15px 30px; /* Larger buttons */
+  font-size: 20px; /* Larger font for buttons */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.yes-button {
+  background-color: #4caf50; /* Green */
+  color: white;
+}
+
+.no-button {
+  background-color: #f44336; /* Red */
+  color: white;
+  position: relative; /* Allow for random movement */
+}
+
+/* Sakura Background Effect */
+.sakura-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('ressources/sakura.gif') repeat;
+  z-index: 1; /* Ensure it's behind the content */
+  opacity: 0.6; /* Slightly transparent */
+}
+
+/* Animations */
+@keyframes slideOut {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
